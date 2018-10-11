@@ -1,0 +1,18 @@
+<h1>Editing Book</h1>
+
+		<%= form_for(@post) do |f| %>
+    	<%= f.label :title %>
+		<%= f.text_field :title %>
+		<br>
+		<br>
+    		<%= f.label :Body %>
+    		<%= f.text_area :body %>
+    	<br>
+    	<br>
+    	<%= f.submit 'Update book' %>
+
+		<% end %>
+		<br>
+	<%= link_to "Show", post_path %>
+	|
+	<a href="/posts/new">Back</a>
