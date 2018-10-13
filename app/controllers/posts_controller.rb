@@ -12,6 +12,7 @@ class PostsController < ApplicationController
   end
 
   def index
+    @post = Post.new
     @posts = Post.all
   end
 
@@ -33,7 +34,7 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     post.destroy
     flash[:notice] = "Book was successfully destroyed."
-    redirect_to posts_new_path
+    redirect_to posts_path
   end
 
   private

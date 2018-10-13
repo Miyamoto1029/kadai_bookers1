@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
   get 'posts/new'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  root to: 'root#top'
+
   get '/top' => 'root#top'
+
+  get '/posts' => 'posts#index'
 
   post '/posts' => 'posts#create'
 
-  get '/posts' => 'posts#index'
+  # get '/posts' => 'posts#index'
 
   get '/posts/:id' => 'posts#show', as: 'post'
 
