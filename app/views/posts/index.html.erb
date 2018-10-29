@@ -11,9 +11,9 @@
 		<tr>
 			<td><%= post.title %></td>
 			<td><%= post.body %></td>
-    		<td><%= link_to "Show", post_path(post.id), class: "show_#{post.id}"%></td>
-  			<td><%= link_to "Edit", edit_post_path(post.id) , class: "edit_#{post.id}"%></td>
-  			<td><%= link_to "Destroy", destroy_post_path(post.id), method: :delete, "data-confirm" => "本当に削除しますか？" ,class: "destroy_#{post.id}"%></td>
+    		<td><%= link_to "Show", post_path(post.id), class: "show_#{post.id}" %></td><!-- "show_#{post.id}"に変更予定 -->
+  			<td><%= link_to "Edit", edit_post_path(post.id) , class: "edit_#{post.id}" %></td> <!--"edit_#{post.id}"に変更予定-->
+  			<td><%= link_to "Destroy", destroy_post_path(post.id), method: :delete, "data-confirm" => "本当に削除しますか？" , class: "destroy_#{post.id}" %></td><!--"destroy_#{post.id}"に変更予定-->
   		</tr>
  	<% end %>
   </table>
@@ -25,10 +25,10 @@
 	<%= form_for(@post) do |f| %>
  
     <label>Title</label>
-    <%= f.text_field :title, class:"book_title" %>
+    <%= f.text_field :title, class: "book_title" %>
 	<br> 
     <label>Body</label>
-    <%= f.text_area :body, class:"book_body" %>
+    <%= f.text_area :body, class: "book_body" %>
 	<br>
 	<br>
 	<%= f.submit 'Create Book' %>
