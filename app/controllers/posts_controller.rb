@@ -27,6 +27,7 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     post.update(post_params)
+    flash[:notice] = "Book was successfully updated."
     redirect_to post_path(post.id)
   end
 
