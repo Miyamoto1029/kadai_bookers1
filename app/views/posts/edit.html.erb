@@ -2,11 +2,11 @@
 
 		<%= form_for(@post) do |f| %>
     	<%= f.label :title %>
-		<%= f.text_field :title %>
+		<%= f.text_field :title, class: "book_title" %>
 		<br>
 		<br>
     		<%= f.label :Body %>
-    		<%= f.text_area :body %>
+    		<%= f.text_area :body, class: "book_body" %>
     	<br>
     	<br>
     	<%= f.submit 'Update book' %>
@@ -14,5 +14,5 @@
 
 		<% end %>
 		<br>
-	<%= link_to "Show", post_path %>
-	<%= link_to "back", posts_path %>
+	<%= link_to "show", post_path, class: "show_#{@post.id}" %>
+	<%= link_to "back", posts_path, class: "back" %>
